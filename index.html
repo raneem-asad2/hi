@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HI</title>
+    <style>
+        .container {
+            position: relative;
+        }
+        
+        .gif {
+            margin-left: 500px;
+        }
+        
+        .header {
+            margin-left: 600px;
+        }
+        
+        #yes {
+            margin-left: 650px;
+            margin-right: 50px;
+            color: rgb(0, 0, 0);
+            border-radius: 40px;
+            background: transparent;
+        }
+        
+        #no {
+            color: rgb(0, 0, 0);
+            border-radius: 40px;
+            background: transparent;
+            position: absolute;
+            /* Set the position to absolute */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <h1 class="header">DO YOU LOVE ME </h1>
+        </div>
+        <div class="gif">
+            <img src="icegif-190.gif">
+        </div>
+        <div class="btns">
+            <button type="button" id="yes" onclick="nextpage()"> YES</button>
+            <button type="button" id="no" onmouseover="move()"> NO</button>
+        </div>
+
+        <script>
+            function nextpage() {
+                window.location.href = "yes.html";
+            }
+
+            function move() {
+                var x = Math.random() * (window.innerWidth - document.getElementById('no').offsetWidth);
+                var y = Math.random() * (window.innerHeight - document.getElementById('no').offsetHeight);
+                document.getElementById('no').style.left = `${x}px`;
+                document.getElementById('no').style.top = `${y}px`;
+            }
+        </script>
+    </div>
+</body>
+
+</html>
